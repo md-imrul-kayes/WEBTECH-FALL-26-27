@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - FoodExpress</title>
+</head>
+<body>
+
+  <header>
+    <h1>FoodExpress</h1>
+  </header>
+
+  <hr>
+
+  <h2>Login to Your Account</h2>
+
+    <p>
+      <label for="email">Username / Email:</label><br>
+      <input type="text" id="email" name="email" placeholder="Enter your username or email" required>
+    </p>
+
+    <p>
+      <label for="password">Password:</label><br>
+      <input type="password" id="password" name="password" placeholder="Enter your password" required>
+    </p>
+
+    <p>
+      <b>Select User Type:</b><br>
+      <input type="radio" id="admin" name="user_type" value="admin" required>
+      <label for="admin">Admin</label><br>
+
+      <input type="radio" id="customer" name="user_type" value="customer">
+      <label for="customer">Customer</label><br>
+
+      <input type="radio" id="seller" name="user_type" value="seller">
+      <label for="seller">Restaurant Owner</label><br>
+
+      <input type="radio" id="manager" name="user_type" value="manager">
+      <label for="manager">Delivery Man</label>
+    </p>
+
+    <p>
+      <button type="submit">Login</button>
+      <button type="reset">Clear</button>
+    </p>
+
+  </form>
+
+  <hr>
+
+  <h3>New here? Register as:</h3>
+  <ul>
+    <li><a href="../customer/customer_register.html">Customer</a></li>
+    <li><a href="../Resturant Owner/ResOwner_register.html">Restaurant Owner</a></li>
+    <li><a href="../Delivary Man/delman_register.html">Delivery Man</a></li>
+    <li><a href="../admin/admin_register.html">Admin</a></li>
+  </ul>
+
+  <p><a href="Home.html"> Back to Home</a></p>
+  <p><a href="/Delivary Man/delman_register.html">Delivary</a></p>
+
+</body>
+</html>

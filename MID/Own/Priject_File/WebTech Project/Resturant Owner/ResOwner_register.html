@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Restaurant Owner Registration - FoodExpress</title>
+</head>
+<body>
+
+  <header>
+    <h1>FoodExpress</h1>
+    <h2>Restaurant Owner Registration</h2>
+  </header>
+
+  <nav>
+    <a href="../Common/Home.html">Home</a> |
+    <a href="../Common/login.html">Login</a>
+
+  </nav>
+
+  <hr>
+  <hr>
+
+
+    <fieldset>
+      <legend>Owner Information</legend>
+
+      <p>
+        <label for="ownername">Owner Name:</label><br>
+        <input type="text" id="ownername" name="ownername" required>
+      </p>
+
+      <p>
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" required>
+      </p>
+
+      <p>
+        <label for="phone">Phone Number:</label><br>
+        <input type="tel" id="phone" name="phone" placeholder="01XXXXXXXXX" required>
+      </p>
+
+      <p>
+        <label for="nid">Owner NID Number:</label><br>
+        <input type="text" id="nid" name="nid" required>
+      </p>
+    </fieldset>
+
+    <br>
+
+    <fieldset>
+      <legend>Restaurant Information</legend>
+
+      <p>
+        <label for="restname">Restaurant Name:</label><br>
+        <input type="text" id="restname" name="restname" required>
+      </p>
+
+      <p>
+        <label for="license">Trade License Number:</label><br>
+        <input type="text" id="license" name="license" required>
+      </p>
+
+      <p>
+        <label for="cuisine">Cuisine Type:</label><br>
+        <select id="cuisine" name="cuisine" required>
+          <option value="">-- Select Cuisine --</option>
+          <option value="bangla">Bangla</option>
+          <option value="fastfood">Fast Food</option>
+          <option value="chinese">Chinese</option>
+          <option value="italian">Italian</option>
+          <option value="indian">Indian</option>
+          <option value="dessert">Dessert &amp; Bakery</option>
+        </select>
+      </p>
+
+      <p>
+        <b>Services Offered:</b><br>
+        <input type="checkbox" id="s1" name="services[]" value="delivery">
+        <label for="s1">Home Delivery</label><br>
+        <input type="checkbox" id="s2" name="services[]" value="pickup">
+        <label for="s2">Pickup</label><br>
+        <input type="checkbox" id="s3" name="services[]" value="dinein">
+        <label for="s3">Dine-in</label>
+      </p>
+
+
+      <p>
+        <label for="area">Area:</label><br>
+        <select id="area" name="area" required>
+          <option value="">-- Select Area --</option>
+          <option value="uttara">Uttara</option>
+          <option value="mirpur">Mirpur</option>
+          <option value="dhanmondi">Dhanmondi</option>
+          <option value="gulshan">Gulshan</option>
+          <option value="banani">Banani</option>
+          <option value="mohammadpur">Mohammadpur</option>
+        </select>
+      </p>
+
+      <p>
+        <label for="opentime">Opening Time:</label><br>
+        <input type="time" id="opentime" name="opentime" required>
+      </p>
+
+      <p>
+        <label for="closetime">Closing Time:</label><br>
+        <input type="time" id="closetime" name="closetime" required>
+      </p>
+
+      <p>
+        <label for="mindelivery">Minimum Order Amount (BDT):</label><br>
+        <input type="number" id="mindelivery" name="mindelivery" min="0" value="0">
+      </p>
+
+      <p>
+        <label for="logo">Restaurant Logo:</label><br>
+        <input type="file" id="logo" name="logo" accept="image/*" required>
+      </p>
+    </fieldset>
+
+    <br>
+
+    <fieldset>
+      <legend>Payment Information</legend>
+
+      <p>
+        <label for="paymethod">Payout Method:</label><br>
+        <select id="paymethod" name="paymethod" required>
+          <option value="">-- Select Method --</option>
+          <option value="bkash">bKash</option>
+          <option value="nagad">Nagad</option>
+          <option value="Cash">Cash</option>
