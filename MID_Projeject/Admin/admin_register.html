@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Registration</title>
+  <link rel="stylesheet" href="../CSS/style.css">
+</head>
+<body>
+
+  <header>
+    <h1>FoodExpress</h1>
+    <h2>Admin Registration</h2>
+  </header>
+
+  <nav>
+    <a href="../Common/Home.html">Home</a> |
+    <a href="../Common/login.html">Login</a>
+  </nav>
+
+  <hr>
+
+  <form id="adminForm" novalidate>
+
+
+    <fieldset>
+      <legend>Admin Information</legend>
+
+      <p>
+        <label for="fullname">Full Name:</label><br>
+        <input type="text" id="fullname" name="fullname">
+      </p>
+
+      <p>
+        <label for="username">Username:</label><br>
+        <input type="text" id="username" name="username">
+      </p>
+
+      <p>
+        <label for="email">Official Email:</label><br>
+        <input type="email" id="email" name="email">
+      </p>
+
+      <p>
+        <label for="phone">Phone Number:</label><br>
+        <input type="tel" id="phone" name="phone" placeholder="01XXXXXXXXX">
+      </p>
+
+      <p>
+        <label for="empid">Employee ID:</label><br>
+        <input type="text" id="empid" name="empid">
+      </p>
+
+      <p>
+        <label for="department">Department:</label><br>
+        <select id="department" name="department" required>
+          <option value="">-- Select Department --</option>
+          <option value="operations">Operations</option>
+          <option value="finance">Finance</option>
+          <option value="support">Customer Support</option>
+          <option value="it">IT &amp; System</option>
+        </select>
+      </p>
+
+      <p>
+        <label for="joindate">Joining Date:</label><br>
+        <input type="date" id="joindate" name="joindate">
+      </p>
+
+      <p>
+        <b>Access Level:</b><br>
+        <input type="radio" id="super" name="access" value="super" required>
+        <label for="super">Super Admin</label><br>
+        <input type="radio" id="moderator" name="access" value="moderator">
+        <label for="moderator">Moderator</label>
+      </p>
+
+      <p>
+        <b>Permissions:</b><br>
+        <input type="checkbox" id="p1" name="permissions[]" value="manage_users">
+        <label for="p1">Manage Users</label><br>
+        <input type="checkbox" id="p2" name="permissions[]" value="manage_restaurants">
+        <label for="p2">Manage Restaurants</label><br>
+        <input type="checkbox" id="p3" name="permissions[]" value="manage_orders">
+        <label for="p3">Manage Orders</label><br>
+        <input type="checkbox" id="p4" name="permissions[]" value="view_reports">
+        <label for="p4">View Reports</label>
+      </p>
+
+      <p>
+        <label for="photo">Profile Photo:</label><br>
+        <input type="file" id="photo" name="photo" accept="image/*">
+      </p>
+    </fieldset>
+
+    <br>
+
+    <fieldset>
+      <legend>Account Security</legend>
+
+
+      <p>
+        <label for="password">Password:</label><br>
+        <input type="password" id="password" name="password">
+      </p>
+
+      <p>
+        <label for="cpassword">Confirm Password:</label><br>
+        <input type="password" id="cpassword" name="cpassword">
+      </p>
+    </fieldset>
+
+    <p>
+      <input type="checkbox" id="terms" name="terms">
+      <label for="terms">I confirm that I am an authorized person</label>
+    </p>
+
+
+    <div id="adminMessage"></div>
+
+    <p>
+      <button type="submit">Register</button>
+      <button type="reset">Reset</button>
+    </p>
+
+  </form>
+
+  <p>Already have an account? <a href="../Common/login.html">Login here</a></p>
+
+  <script src="admin_validation.js"></script>
+
+</body>
+</html>
