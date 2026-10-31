@@ -1,0 +1,263 @@
+/* =========================================================
+   FoodExpress - Shared Stylesheet
+   Used by: Common, Admin, Resturant Owner, Delivary Man pages
+   ========================================================= */
+
+/* ---------- Theme variables ---------- */
+:root {
+    --primary: #e67e22;
+    --primary-dark: #d35400;
+    --dark: #2c3e50;
+    --gray: #7f8c8d;
+    --gray-dark: #626e70;
+    --bg: #f4f6f8;
+    --white: #ffffff;
+    --border: #d0d7de;
+    --error-bg: #fdecea;
+    --error-text: #c0392b;
+    --radius: 6px;
+}
+
+/* ---------- Base ---------- */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--bg);
+    color: #333;
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+}
+
+/* ---------- Header ---------- */
+header {
+    text-align: center;
+    color: var(--dark);
+    margin-bottom: 10px;
+}
+
+header h1 {
+    margin: 0;
+    color: var(--primary);
+    letter-spacing: 1px;
+}
+
+header h2 {
+    margin: 5px 0 0;
+    font-size: 20px;
+    font-weight: normal;
+}
+
+/* ---------- Navigation ---------- */
+nav {
+    text-align: center;
+    margin: 15px 0;
+}
+
+nav a {
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0 8px;
+}
+
+nav a:hover {
+    color: var(--primary-dark);
+    text-decoration: underline;
+}
+
+/* ---------- Links ---------- */
+a {
+    color: var(--primary);
+}
+
+a:hover {
+    color: var(--primary-dark);
+}
+
+/* ---------- Horizontal line ---------- */
+hr {
+    border: none;
+    border-top: 1px solid var(--border);
+    margin: 15px auto;
+    max-width: 700px;
+}
+
+/* ---------- Sections (Home page) ---------- */
+section {
+    background-color: var(--white);
+    max-width: 700px;
+    margin: 20px auto;
+    padding: 25px;
+    border-radius: var(--radius);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+section h2 {
+    color: var(--dark);
+    margin-top: 0;
+}
+
+/* ---------- Footer ---------- */
+footer {
+    text-align: center;
+    max-width: 700px;
+    margin: 20px auto;
+    color: var(--dark);
+}
+
+footer h2 {
+    color: var(--primary);
+}
+
+/* ---------- Form container ---------- */
+form {
+    background-color: var(--white);
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 25px;
+    border-radius: var(--radius);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+/* Login page headings and extra content (outside the form) */
+body > h2,
+body > h3 {
+    text-align: center;
+    color: var(--dark);
+}
+
+body > ul {
+    max-width: 300px;
+    margin: 10px auto;
+}
+
+body > p {
+    text-align: center;
+}
+
+/* ---------- Fieldset & legend ---------- */
+fieldset {
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    margin: 0 0 20px;
+    padding: 15px;
+}
+
+legend {
+    color: var(--primary);
+    font-weight: bold;
+    padding: 0 8px;
+}
+
+/* ---------- Labels ---------- */
+label {
+    font-weight: bold;
+    color: var(--dark);
+}
+
+/* Labels beside radio / checkbox should look lighter */
+input[type="radio"] + label,
+input[type="checkbox"] + label {
+    font-weight: normal;
+    color: #333;
+}
+
+/* ---------- Inputs ---------- */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="password"],
+input[type="number"],
+input[type="date"],
+input[type="time"],
+input[type="file"],
+select {
+    width: 100%;
+    padding: 9px 10px;
+    margin-top: 5px;
+    font-size: 14px;
+    background-color: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+input:focus,
+select:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(230, 126, 34, 0.2);
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    margin: 6px 6px 6px 0;
+    accent-color: var(--primary);
+}
+
+/* ---------- Buttons ---------- */
+button {
+    background-color: var(--primary);
+    color: var(--white);
+    padding: 10px 22px;
+    font-size: 14px;
+    border: none;
+    border-radius: var(--radius);
+    cursor: pointer;
+    margin-right: 8px;
+    transition: background-color 0.2s;
+}
+
+button:hover {
+    background-color: var(--primary-dark);
+}
+
+button[type="reset"] {
+    background-color: var(--gray);
+}
+
+button[type="reset"]:hover {
+    background-color: var(--gray-dark);
+}
+
+/* ---------- Validation message boxes ---------- */
+#loginMessage,
+#adminMessage,
+#ownerMessage,
+#delmanMessage {
+    color: var(--error-text);
+    font-weight: bold;
+}
+
+/* Box shows only when JS puts a message inside */
+#loginMessage:not(:empty),
+#adminMessage:not(:empty),
+#ownerMessage:not(:empty),
+#delmanMessage:not(:empty) {
+    background-color: var(--error-bg);
+    border-left: 4px solid var(--error-text);
+    padding: 10px 12px;
+    margin: 10px 0;
+    border-radius: 4px;
+}
+
+/* ---------- Small screens ---------- */
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+
+    form,
+    section {
+        padding: 15px;
+    }
+
+    button {
+        width: 100%;
+        margin: 5px 0;
+    }
+}
