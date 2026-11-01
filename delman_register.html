@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Delivery Man Registration</title>
+  <link rel="stylesheet" href="../CSS/style.css">
+</head>
+<body>
+
+  <header>
+    <h1>FoodExpress</h1>
+    <h2>Delivery Man Registration</h2>
+  </header>
+
+  <nav>
+    <a href="../Common/Home.html">Home</a> |
+    <a href="../Common/login.html">Login</a>
+  </nav>
+
+  <hr>
+
+
+    <fieldset>
+      <legend>Personal Information</legend>
+
+      <p>
+        <label for="fullname">Full Name:</label><br>
+        <input type="text" id="fullname" name="fullname" required>
+      </p>
+
+      <p>
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" required>
+      </p>
+
+      <p>
+        <label for="phone">Phone Number:</label><br>
+        <input type="tel" id="phone" name="phone" placeholder="01XXXXXXXXX" required>
+      </p>
+
+      <p>
+        <label for="dob">Date of Birth:</label><br>
+        <input type="date" id="dob" name="dob" required>
+      </p>
+
+      <p>
+        <b>Gender:</b><br>
+        <input type="radio" id="male" name="gender" value="male" required>
+        <label for="male">Male</label>
+        <input type="radio" id="female" name="gender" value="female">
+        <label for="female">Female</label>
+        <input type="radio" id="other" name="gender" value="other">
+        <label for="other">Other</label>
+      </p>
+
+      <p>
+        <label for="nid">NID Number:</label><br>
+        <input type="text" id="nid" name="nid" required>
+      </p>
+
+      <p>
+        <label for="photo">Profile Photo:</label><br>
+        <input type="file" id="photo" name="photo" accept="image/*" required>
+      </p>
+    </fieldset>
+
+    <br>
+
+    <fieldset>
+      <legend>Vehicle &amp; Work Information</legend>
+
+      <p>
+        <label for="vehicle">Vehicle Type:</label><br>
+        <select id="vehicle" name="vehicle" required>
+          <option value="">-- Select Vehicle --</option>
+          <option value="bicycle">Bicycle</option>
+          <option value="motorbike">Motorbike</option>
+          <option value="scooter">Scooter</option>
+        </select>
+      </p>
+
+      <p>
+        <label for="plate">Vehicle Plate Number:</label><br>
+        <input type="text" id="plate" name="plate">
+      </p>
+
+      <p>
+        <label for="license">Driving License Number:</label><br>
+        <input type="text" id="license" name="license">
+      </p>
+
+      <p>
+        <label for="area">Working Area:</label><br>
+        <select id="area" name="area" required>
+          <option value="">-- Select Area --</option>
+          <option value="uttara">Uttara</option>
+          <option value="mirpur">Mirpur</option>
+          <option value="dhanmondi">Dhanmondi</option>
+          <option value="gulshan">Gulshan</option>
+          <option value="banani">Banani</option>
+          <option value="mohammadpur">Mohammadpur</option>
+        </select>
+      </p>
+
+      <p>
+        <b>Availability Shift:</b><br>
+        <input type="radio" id="morning" name="shift" value="morning" required>
+        <label for="morning">Morning (8AM - 2PM)</label><br>
+        <input type="radio" id="evening" name="shift" value="evening">
+        <label for="evening">Evening (2PM - 10PM)</label><br>
+        <input type="radio" id="fulltime" name="shift" value="fulltime">
+        <label for="fulltime">Full Time</label>
+      </p>
+
+      <p>
+        <label for="experience">Delivery Experience (years):</label><br>
+        <input type="number" id="experience" name="experience" min="0" max="30" value="0">
+      </p>
+
+      <p>
+        <label for="emergency">Emergency Contact Number:</label><br>
+        <input type="tel" id="emergency" name="emergency" required>
+      </p>
+
+    </fieldset>
+
+    <br>
+
+    <fieldset>
+      <legend>Account Security</legend>
+
+      <p>
+        <label for="password">Password:</label><br>
+        <input type="password" id="password" name="password" minlength="6" required>
+      </p>
+
+      <p>
+        <label for="cpassword">Confirm Password:</label><br>
+        <input type="password" id="cpassword" name="cpassword" minlength="6" required>
+      </p>
+    </fieldset>
+
+    <p>
+      <input type="checkbox" id="terms" name="terms" required>
+      <label for="terms">I agree to the terms and conditions</label>
+    </p>
+
+    <p>
+      <button type="submit">Register</button>
+      <button type="reset">Reset</button>
+    </p>
+
+  </form>
+
+  <p>Already have an account? <a href="../Common/login.html">Login here</a></p>
+
+</body>
+</html>
